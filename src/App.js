@@ -14,6 +14,7 @@ function App() {
       <div>hello</div>
       <Food fav="kimchi" />
       <Food fav="ramenn" />
+      <Food fav="burger"/>
       <Food fav="samgiposal" />
       <Food fav="chukumi" />
     </div>
