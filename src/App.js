@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import Movie from './Movie';
+import './Movie.css';
+
 class App extends React.Component {
   state = {
     isLoading: true,
@@ -29,19 +31,30 @@ class App extends React.Component {
   }
   render() {
     const { isLoading, movies } = this.state;
-    return <div>
-      {isLoading ? "Loading..." : movies.map(movie => (
-        <Movie
-          key={movie.key}
-          id={movie.id}
-          year={movie.year}
-          title={movie.title}
-          summary={movie.summary}
-          poster={movie.medium_cover_image} />
-      )
-      )}
-    </div>
-  }
+    return <section className="container">
+      {isLoading ? (
+        <div className="loader">
+          <span className="loader__text">Loading...</span>
+        </div>
+      ) : (
+          <div class="movies">
+            {movies.map(movie => (
+              <Movie
+                key={movie.key}
+                id={movie.id}
+                year={movie.year}
+                title={movie.title}
+                summary={movie.summary}
+                poster={movie.medium_cover_image} 
+                genres={movie.genres}/>
+            ))}
+          </div>
+        )}
+    </section>
+  };
 }
 
 export default App;
+
+// javascript 내에서 class 는 본인(Component class) 을 의미해서
+// 헷갈릴 경우가 있따. className을 쓴다.
