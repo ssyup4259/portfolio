@@ -2,7 +2,7 @@ import React from 'react';
 import { HashRouter, Route, BrowserRouter } from 'react-router-dom';
 import About from './routes/About';
 import Home from './routes/Home';
-import Detail from './routes/Detail'
+import Detail from './routes/Detail';
 import Navigation from './components/Navigation';
 function App() {
   return (
