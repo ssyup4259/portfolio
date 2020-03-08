@@ -10,4 +10,4 @@ visual studio code
 
 #### 2. react 환경설정
 
-node.js 및 npm, npx 설치
+node.js 및 npm, npx 설치, 노마드 코더 
